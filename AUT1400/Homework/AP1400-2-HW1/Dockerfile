@@ -33,4 +33,6 @@ RUN cmake ..
 RUN make
 
 # CMD ["/usr/sbin/sshd","-D"]
-CMD ["./main"]
+# CMD ["./main"]
+# Command to keep the container running
+CMD ["tail", "-f", "/dev/null"]
