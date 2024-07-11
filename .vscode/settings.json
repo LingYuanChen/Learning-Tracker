@@ -50,6 +50,10 @@
         "vector": "cpp",
         "algorithm": "cpp",
         "__tree": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "__memory": "cpp",
+        "unordered_set": "cpp",
+        "deque": "cpp",
+        "queue": "cpp"
     }
 }

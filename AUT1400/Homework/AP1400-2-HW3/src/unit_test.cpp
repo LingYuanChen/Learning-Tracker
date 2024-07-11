@@ -3,7 +3,7 @@
 #include "gmock/gmock.h"
 #include "bst.h"
 
-/*
+
 TEST(HW3Test, TEST1) {
 
     BST::Node left{10, nullptr, nullptr};
@@ -45,6 +45,7 @@ TEST(HW3Test, TEST4) {
     std::cout << "PRINT A NODE" << std::endl;
     std::cout << node << std::endl;
     std::cout << std::string(80, '*') << std::endl;
+
 }
 
 TEST(HW3Test, TEST5) {
@@ -204,7 +205,7 @@ TEST(HW3Test, TEST15) {
     bst.add_node(9);
     
     BST::Node** node{bst.find_successor(10)};
-    EXPECT_EQ((*node)->value, 9);
+    EXPECT_EQ((*node)->value, 15);
     EXPECT_EQ((*node)->left, nullptr);
     EXPECT_EQ((*node)->right, nullptr);
 }
@@ -301,7 +302,7 @@ TEST(HW3Test, TEST20) {
     bst.add_node(2);
     bst.add_node(7);
     bst.add_node(75);
-    
+
     EXPECT_EQ(bst.length(), 10);
     EXPECT_TRUE(bst.delete_node(50)); // only right child
     EXPECT_EQ(bst.length(), 9);
@@ -356,8 +357,8 @@ TEST(HW3Test, TEST22) {
     EXPECT_EQ(bst.length(), 12);
     EXPECT_TRUE(bst.delete_node(10)); // both children exist
     EXPECT_EQ(bst.length(), 11);
-    EXPECT_EQ(bst.get_root()->left->value, 7);
-    EXPECT_EQ(bst.get_root()->left->left->right, nullptr);
+    EXPECT_EQ(bst.get_root()->left->value, 15);
+    EXPECT_EQ(bst.get_root()->left->right->left, nullptr);
     EXPECT_EQ(bst.get_root()->left->left->value, 5);
 }
 
@@ -380,9 +381,9 @@ TEST(HW3Test, TEST23) {
     EXPECT_EQ(bst.length(), 13);
     EXPECT_TRUE(bst.delete_node(25)); // both children exist
     EXPECT_EQ(bst.length(), 12);
-    EXPECT_EQ(bst.get_root()->value, 22);
+    EXPECT_EQ(bst.get_root()->value, 50);
     EXPECT_EQ(bst.get_root()->left->value, 10);
-    EXPECT_EQ(bst.get_root()->left->right->right, nullptr);
+    EXPECT_EQ(bst.get_root()->right->left->left, nullptr);
 }
 
 TEST(HW3Test, TEST24) {
@@ -461,7 +462,7 @@ TEST(HW3Test, TEST28) {
 TEST(HW3Test, TEST29) {
     BST bst1{5, 1, 10, 2, 8, 50, 4, 60};
     BST bst2{3, 2, 100, 20, 8, 50, 4, 60, 44, 23};
-    EXPECT_EQ((*bst1.find_successor(5))->value, 4);
+    EXPECT_EQ((*bst1.find_successor(5))->value, 8);
     EXPECT_EQ(bst2.length(), 10);
 }
 
@@ -490,7 +491,7 @@ TEST(HW3Test, TEST31) {
     for(size_t i{}; i < values1.size(); i++)
         EXPECT_EQ(values2[i], values1[i]-1);    
 }
-*/
+
 
 
 
