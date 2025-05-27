@@ -6,7 +6,7 @@
 #include "cappuccino.h"
 #include "mocha.h"
 
-/*
+
 TEST(HW5Test, TEST1) {
     Cinnamon    cinnamon{2};  
     EXPECT_EQ(cinnamon.get_name(), "Cinnamon");
@@ -63,7 +63,7 @@ TEST(HW5Test, TEST5) {
 TEST(HW5Test, TEST6) {
     EspressoBased* esp{new Cappuccino{}};
     reinterpret_cast<Cappuccino*>(esp)->add_side_item(new Cookie{1});
-    std::vector<Ingredient*>& sides = reinterpret_cast<Cappuccino*>(esp)->get_side_items();
+    std::vector<std::shared_ptr<Ingredient>>& sides = reinterpret_cast<Cappuccino*>(esp)->get_side_items();
     EXPECT_EQ(sides.size(), 1);
     delete esp;
     EXPECT_EQ(sides.size(), 0);
@@ -85,7 +85,6 @@ TEST(HW5Test, TEST8) {
     equal = cappuccino;
     EXPECT_EQ(equal.price(), 56);
 }
-
 TEST(HW5Test, TEST9) {
     Cappuccino equal;
     equal.add_side_item(new Sugar{2});
@@ -106,7 +105,7 @@ TEST(HW5Test, TEST10) {
     EspressoBased* esp{new Mocha{}};
     reinterpret_cast<Cappuccino*>(esp)->add_side_item(new Cookie{1});
     reinterpret_cast<Cappuccino*>(esp)->add_side_item(new Sugar{2});
-    std::vector<Ingredient*>& sides = reinterpret_cast<Cappuccino*>(esp)->get_side_items();
+    std::vector<std::shared_ptr<Ingredient>>& sides = reinterpret_cast<Cappuccino*>(esp)->get_side_items();
     EXPECT_EQ(sides.size(), 2);
     delete esp;
     EXPECT_EQ(sides.size(), 0);
@@ -121,7 +120,7 @@ TEST(HW5Test, TEST12) {
     Mocha mocha{};
     mocha.brew();
 }
-*/
+
 
 
 

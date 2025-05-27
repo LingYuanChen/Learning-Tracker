@@ -54,6 +54,9 @@
         "__memory": "cpp",
         "unordered_set": "cpp",
         "deque": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "memory": "cpp",
+        "print": "cpp",
+        "stack": "cpp"
     }
 }
